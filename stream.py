@@ -232,8 +232,8 @@ algo = vclf
 
 # X_train, X_test, Y_train, Y_test = train_test_split(data, target, test_size=0.2)
 
-X_train = data[0:2167]
-Y_train = target[0:2167]
+X_train = data[0:len(data)]
+Y_train = target[0:len(data)]
 
 X_test = data[2167:len(data)-1]
 Y_test = target[2167:len(data)-1]
@@ -242,7 +242,7 @@ X_pred = data[len(data) - 1: len(data)]
 
 
 algo.fit(X_train, Y_train)
-algo_score = algo.score(X_test, Y_test)
+algo_score = algo.score(X_train, Y_train)
 
 algo_pred = algo.predict(X_pred)
 
