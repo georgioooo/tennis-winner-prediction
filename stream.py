@@ -36,7 +36,7 @@ df = df.reset_index(drop=True)
 
 df = df.drop(['Winner', 'Loser', 'random_player'], axis=1)
 
-df = df[0: len(df)-15]
+df = df[0: len(df)-7]
 
 st.title('tourney informations')
 
