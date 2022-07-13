@@ -250,9 +250,9 @@ if algorithm == 'vclf':
         if algo_pred[0] == 1:
                 st.text('first player will win the match')
                 st.write(algo_score)
-                if algo_pred[0] == 2:
-        st.text('second player will win the match')
-        st.write(algo_score)
+        if algo_pred[0] == 2:
+                st.text('second player will win the match')
+                st.write(algo_score)
         
 else:
         pass
