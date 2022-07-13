@@ -228,8 +228,6 @@ data = data.join(pd.get_dummies(data[['Tournament', 'Surface', 'Court', 'winner_
 
 data = data.drop(['Tournament', 'Surface', 'Court', 'winner_hand', 'loser_hand'], axis=1)
 
-algo = vclf
-
 # X_train, X_test, Y_train, Y_test = train_test_split(data, target, test_size=0.2)
 
 X_train = data[0:len(data)]
@@ -240,15 +238,23 @@ Y_test = target[2167:len(data)-1]
 
 X_pred = data[len(data) - 1: len(data)]
 
+algorithm = st.selectbox('select a algo', ['nothing', 'vclf'])
 
-algo.fit(X_train, Y_train)
-algo_score = algo.score(X_train, Y_train)
+if algorithm == 'vclf': 
+        algo = vclf
+        algo.fit(X_train, Y_train)
+        algo_score = algo.score(X_train, Y_train)
 
-algo_pred = algo.predict(X_pred)
+        algo_pred = algo.predict(X_pred)
 
-if algo_pred[0] == 1:
-    st.text('first player will win the match')
-    st.write(algo_score)
-if algo_pred[0] == 2:
-    st.text('second player will win the match')
-    st.write(algo_score)
+        if algo_pred[0] == 1:
+                st.text('first player will win the match')
+                st.write(algo_score)
+                if algo_pred[0] == 2:
+        st.text('second player will win the match')
+        st.write(algo_score)
+        
+else:
+        pass
+
+        
