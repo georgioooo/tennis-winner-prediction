@@ -3,5 +3,5 @@
 this project is to predict the winner in a match of tennis
 
 ## variables
-> * variable 1:  Ace average for each player all time
+> * variable 1: Ace average for each player all time
 > * variable 2: Ace average for each player calculated by surface
