@@ -6,8 +6,8 @@ df = pd.read_csv('atp_final.csv')
 
 # History table of each player By Surface
 def surface_player(player, surface, table):
-    df_player = df[(table['first_player'] == player) & (table['surface'] == surface) |
-                   (table['second_player'] == player) & (table['surface'] == surface)]
+    df_player = table[(table['first_player'] == player) & (table['surface'] == surface) |
+                      (table['second_player'] == player) & (table['surface'] == surface)]
 
     return df_player
 
@@ -36,6 +36,8 @@ for i in range(1, len(df)):
     else:
         player1_AceAverage_surface.append(np.nan)
 
+df['player1_AceAverage_surface'] = player1_AceAverage_surface
+
 player2_AceAverage_surface = [0]
 # This script is for calculate the Ace average history by surface for the second player
 for i in range(1, len(df)):
@@ -58,3 +60,7 @@ for i in range(1, len(df)):
 
     else:
         player2_AceAverage_surface.append(np.nan)
+
+df['player2_AceAverage_surface'] = player2_AceAverage_surface
+
+df.to_csv('atp_final.csv', index=False)
