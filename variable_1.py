@@ -34,6 +34,8 @@ for i in range(1, len(df)):
     else:
         player1_AceAverage_AllTime.append(np.nan)
 
+df['player1_AceAverage_AllTime'] = player1_AceAverage_AllTime
+
 
 # This script is for calculate the Ace average history for the second player
 player2_AceAverage_AllTime = [0]
@@ -57,3 +59,7 @@ for i in range(1, len(df)):
 
     else:
         player2_AceAverage_AllTime.append(np.nan)
+
+df['player2_AceAverage_AllTime'] = player2_AceAverage_AllTime
+
+df.to_csv('atp_final.csv', index=False)
