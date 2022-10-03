@@ -13,7 +13,7 @@ def player_history(player, table):
 
 player1_AceAverage_AllTime = [0]
 
-# This script is for calculate the Ace average history of the first player
+# This part is for calculate the Ace average history of the first player
 for i in range(1, len(df)):
 
     player1 = df.loc[i]['first_player']
