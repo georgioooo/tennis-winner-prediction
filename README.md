@@ -1,7 +1,8 @@
 # tennis-prediction-2
 
-this project is to predict the winner in a match of tennis
-At first we will create some variables and we will try to find between them the most important
+this project is to predict the winner in a match of tennis. 
+
+At first, we will create some variables and we will try to find between them the most important
 
 ## I. variables
 
