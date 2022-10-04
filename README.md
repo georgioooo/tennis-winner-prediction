@@ -12,3 +12,6 @@ At first we will create some variables and we will try to find between them the 
 ### 2. surface impact
 > * variable 3: Winning average for each player calculate by surface all time
 > * variable 4: Winning average for each player calculate by surface and year
+
+### 3. Head to head
+> * variable 5: the results of winning matchs between the two players.
