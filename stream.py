@@ -7,10 +7,12 @@ from sklearn.ensemble import VotingClassifier
 from sklearn.model_selection import train_test_split
 
 
-df2 = pd.read_csv("new_data_atp_2022.csv")
-df1 = pd.read_csv("new_data_atp_2021.csv")
+# df2 = pd.read_csv("new_data_atp_2022.csv")
+# df1 = pd.read_csv("new_data_atp_2021.csv")
 
-df = pd.concat([df1, df2], ignore_index=True)
+# df = pd.concat([df1, df2], ignore_index=True)
+
+df = pd.read-csv("atp_final.csv")
 
 df = df.dropna()
 df = df[df.Wage != '(1']
