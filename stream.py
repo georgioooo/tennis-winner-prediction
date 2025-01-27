@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 
 # df = pd.concat([df1, df2], ignore_index=True)
 
-df = pd.read-csv("atp_final.csv")
+df = pd.read_csv("atp_final.csv")
 
 df = df.dropna()
 df = df[df.Wage != '(1']
